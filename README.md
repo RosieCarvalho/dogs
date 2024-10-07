@@ -33,3 +33,8 @@ definições globais de estilo
   -api para graficos: victory
 - rotas paralelas e interceptação de rotas
   - abrir um modal, mudar a url mas permanecer na pagina atual
+
+## deploy na vercel
+
+- npm run build
+- npm run start

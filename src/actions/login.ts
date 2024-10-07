@@ -3,8 +3,12 @@
 import { TOKEN_POST } from '@/functions/api';
 import apiError from '@/functions/api-error';
 import { cookies } from 'next/headers';
-
-export default async function login(state: {}, formData: FormData) {
+type stateType = {
+  ok: boolean;
+  data?: object | null;
+  error: string;
+};
+export default async function login(state: stateType, formData: FormData) {
   const username = formData.get('username') as string | null;
   const password = formData.get('password') as string | null;
 

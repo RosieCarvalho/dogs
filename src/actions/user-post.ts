@@ -4,7 +4,12 @@ import { USER_POST } from '@/functions/api';
 import apiError from '@/functions/api-error';
 import login from './login';
 
-export default async function userPost(state: {}, formData: FormData) {
+type stateType = {
+  ok: boolean;
+  data?: object | null;
+  error: string;
+};
+export default async function userPost(state: stateType, formData: FormData) {
   const username = formData.get('username') as string | null;
   const email = formData.get('email') as string | null;
   const password = formData.get('password') as string | null;

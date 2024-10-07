@@ -5,8 +5,12 @@ import apiError from '@/functions/api-error';
 import { revalidateTag } from 'next/cache';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-
-export default async function photoPost(state: {}, formData: FormData) {
+type stateType = {
+  ok: boolean;
+  data: object | null;
+  error: string;
+};
+export default async function photoPost(state: stateType, formData: FormData) {
   const token = cookies().get('token')?.value;
   const nome = formData.get('nome') as string | null;
   const idade = formData.get('idade') as string | null;

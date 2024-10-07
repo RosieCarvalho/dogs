@@ -2,7 +2,6 @@
 
 import { USER_GET } from '@/functions/api';
 import apiError from '@/functions/api-error';
-import login from './login';
 import { cookies } from 'next/headers';
 
 export type User = {

@@ -8,7 +8,6 @@ import styles from './feed.module.css';
 
 export default function Feed({
   photos,
-  user,
 }: {
   photos: Photo[];
   user?: 0 | string;
